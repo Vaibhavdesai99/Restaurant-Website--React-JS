@@ -1,22 +1,20 @@
 import React from 'react'
-import Image from './Images/AdobeStock_338951876_Preview.jpeg'
+import FoodImg from '../../Images/AdobeStock_338951876_Preview.jpeg'
 import classes from './Header.module.css'
-import HeaderButton from './HeaderButton'
-const Header = () => {
+import HeaderCartButton from './HeaderCartButton'
+
+const Header = (props) => {
   return (
    <>
-    <header className={classes.header}>
-       <div className='left_header'>
-          <h2>ReactMeals</h2>
-       </div>
-       <div className='right_header'> 
-      <HeaderButton></HeaderButton>
-       </div> 
-    </header>
-    <div className={classes.img}>
-    <img src={Image} alt='food_image'></img>
-    </div> 
-     </>
+   <header className={classes.header}>
+      <h1>React Meals</h1>
+      <HeaderCartButton></HeaderCartButton>
+    
+   </header>
+   <div className={classes['main-image']}>
+      <img src={FoodImg} alt='foodimg'></img>
+   </div>
+   </>
   )
 }
 
