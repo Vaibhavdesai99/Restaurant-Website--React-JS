@@ -1,0 +1,34 @@
+/* Header CSS style */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 0rem 0  0rem ;
+   
+}
+
+.header{
+    background-color: red;
+}
+
+.left_header {
+    margin-left: 3rem;
+    font-weight: bold;
+}
+
+.right_header{
+    margin-right: 5rem;
+    font-weight: bold  ;
+}
+.foodImage{
+    width: 100%;
+   
+
+}
+
+img{
+    width: 100%;
+    height: 50%;
+}
