@@ -1,12 +1,14 @@
 /* MealItems.module.css */
 
 .meals {
+  
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 1rem;
+    background-color: #f9eeee;
+    padding: 0rem;
     border-radius: 8px;
+    margin-left: -42px;
+    padding-left: 20px;
   }
   
   .meals h3 {
@@ -18,12 +20,14 @@
     font-size: 1rem;
     color: #777;
     margin-bottom: 0.5rem;
+    font-style: italic;
   }
   
   .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #a3ea1e;
+
   }
   
   li {
