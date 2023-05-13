@@ -6,7 +6,10 @@ const App = () => {
   return (
     <div>
     <Header/>
+    <main>
     <Meals/>
+    </main>
+   
     </div>
   )
 }
