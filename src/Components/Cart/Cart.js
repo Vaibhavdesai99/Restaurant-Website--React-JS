@@ -11,14 +11,18 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    // this func is for close cart when user click on Backdrop.
+    <Modal onCloseCart={props.onCloseCart}>
       {cartItems}
       <div className={classes.Total}>
         <spn>Total Amount</spn>
         <span>40.38</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]}>Close</button>
+        {/* here that OnCloseCart func get received...to close cart when click on close button */}
+        <button className={classes["button--alt"]} onClick={props.onCloseCart}>
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
