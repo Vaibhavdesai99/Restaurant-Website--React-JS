@@ -1,17 +1,18 @@
-import React from 'react'
-import Header from './Components/Layout/Header'
-import Meals from './Components/Meals/Meals'
+import React from "react";
+import Header from "./Components/Layout/Header";
+import Meals from "./Components/Meals/Meals";
+import Cart from "./Components/Cart/Cart";
 
 const App = () => {
   return (
-    <div>
-    <Header/>
-    <main>
-    <Meals/>
-    </main>
-   
-    </div>
-  )
-}
+    <>
+      <Cart />
+      <Header />
+      <main>
+        <Meals />
+      </main>
+    </>
+  );
+};
 
-export default App
+export default App;

@@ -1,0 +1,52 @@
+/* Modal.module.css */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+  max-width: 90%;
+  width: 440px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+.modal ul {
+  margin-left: -30px;
+  font-weight: bold;
+  margin-top: 8px;
+  color: red;
+}
+
+.content span {
+  font-weight: bold;
+}
+.content {
+  padding: 1rem;
+}
+/* 
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  margin-left: 18rem;
+} */
+
+/* Add any additional styles or modifications as needed */
