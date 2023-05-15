@@ -1,24 +1,40 @@
 import React, { useState } from "react";
-
 import CartContext from "./Cartcontext";
 
 const CartProvider = (props) => {
-  // we use useState() here caz , when new item get added the old get overridden by new one so ...
   const [items, updateItems] = useState([]);
+
   const addItemToCartHandler = (item) => {
     updateItems([...items, item]);
     console.log("inside addItemHandler", cartContext);
   };
 
-  const removeItemFromCartHandler = (id) => {};
+  // To remove item from cart :
+  const removeItemFromCartHandler = (id) => {
+    const updatedItemList = items.map((item) => {
+      if (item.id === id) {
+        // Decrease the quantity by 1
+        const updatedItem = { ...item };
+        updatedItem.quantity -= 1;
+        // Adjust the price accordingly
+        updatedItem.price = item.price * updatedItem.quantity;
+        return updatedItem;
+      }
+      return item;
+    });
+    // Remove the item if the quantity becomes zero
+    const updatedItems = updatedItemList.filter((item) => item.quantity > 0);
+    updateItems(updatedItems);
+  };
 
-  // here we assign state variable to items :
+  // CartContext
   const cartContext = {
     items: items,
     totalAmount: 0,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
+
   return (
     <CartContext.Provider value={cartContext}>
       {console.log("re-render when update state", cartContext)}

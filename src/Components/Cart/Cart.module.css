@@ -55,10 +55,14 @@
 .summary {
   display: flex;
   align-items: center;
+  color: black;
+  font-weight: 100;
 }
 
 .summary span {
   margin-right: 1rem;
+  color: black;
+  font-weight: 100;
 }
 
 .actions {

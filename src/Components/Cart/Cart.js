@@ -16,6 +16,7 @@ const Cart = (props) => {
       existingItem.price += item.price * Number(item.quantity);
     } else {
       acc.push({
+        id: item.id,
         name: item.name,
         quantity: Number(item.quantity),
         price: item.price * Number(item.quantity),
@@ -36,7 +37,9 @@ const Cart = (props) => {
           <div>
             <h3>{item.name}</h3>
             <div className={classes.summary}>
-              <span className={classes.price}>Price: {item.price}</span>
+              <span className={classes.price}>
+                Price: {item.price.toFixed(2)}
+              </span>
               <span className={classes.quantity}>
                 Quantity: {item.quantity}
               </span>
