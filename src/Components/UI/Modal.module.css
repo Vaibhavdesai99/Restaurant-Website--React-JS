@@ -21,12 +21,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 20;
   max-width: 90%;
-  width: 440px;
+  width: 600px;
   max-height: 80%;
   overflow-y: auto;
 }
 .modal ul {
-  margin-left: -30px;
+  margin-left: 0px;
   font-weight: bold;
   margin-top: 8px;
   color: red;

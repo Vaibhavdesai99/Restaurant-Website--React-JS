@@ -3,6 +3,8 @@
   flex-direction: row;
   align-items: center;
   gap: 15rem;
+  gap: 24rem;
+  font-weight: bold;
 }
 
 .actions {
@@ -14,10 +16,13 @@
   padding: 10px 6px;
 }
 .button--alt {
-  background-color: red;
   padding: 6px 6px;
   border: none;
   border-radius: 6px;
+}
+
+.button--alt:hover {
+  background-color: red;
   color: white;
 }
 
@@ -27,4 +32,67 @@
   border: none;
   border-radius: 6px;
   color: white;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-items h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+}
+
+.summary span {
+  margin-right: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+/* 
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #ddd;
+} */
+
+.Cartactions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  left: 2rem;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  left: 21rem;
+  top: -1rem;
 }
