@@ -1,0 +1,43 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item .summary {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item .summary .price {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.cart-item .summary .amount {
+  color: #888;
+}
+
+.cart-item .actions {
+  display: flex;
+}
+
+.cart-item .actions .cart-btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  border: none;
+  background-color: transparent;
+  color: #888;
+  cursor: pointer;
+}
+
+.cart-item .actions .cart-btn:hover {
+  color: #333;
+}

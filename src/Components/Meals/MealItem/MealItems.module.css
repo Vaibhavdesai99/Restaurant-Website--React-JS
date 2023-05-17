@@ -1,37 +1,34 @@
 /* MealItems.module.css */
 
 .meals {
-  
-    display: flex;
-    flex-direction: column;
-    background-color: #f9eeee;
-    padding: 0rem;
-    border-radius: 8px;
-    margin-left: -42px;
-    padding-left: 20px;
-  }
-  
-  .meals h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-  }
-  
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #a3ea1e;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9eeee;
+  padding: 0rem;
+  border-radius: 8px;
+  margin-left: -42px;
+  padding-left: 20px;
+}
 
-  }
-  
-  li {
-    list-style: none;
-    margin-bottom: 1rem;
-  }
-  
+.meals h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #c14c4c;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f00428;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}

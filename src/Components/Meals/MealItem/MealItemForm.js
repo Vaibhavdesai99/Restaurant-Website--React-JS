@@ -1,23 +1,35 @@
-import React, { useContext } from "react";
+import React, { useRef, useState } from "react";
 import Input from "../../UI/Input";
 import classes from "./MealItemForm.module.css";
-import CartContext from "../../../Store/Cartcontext";
 
 const MealItemForm = (props) => {
-  const cartcntx = useContext(CartContext);
-  // console.log("reinitalized", cartcntx);
+  const [ammountisValid, setAmountIsValid] = useState(true);
+  const amountInputRef = useRef();
 
-  const addItemToCart = (event) => {
+  const submmitHandler = (event) => {
     event.preventDefault();
+    const enteredAmount = amountInputRef.current.value;
+    // added + in front of enteredAmount caz we need to convert string to number
 
-    const quantity = document.getElementById("amount_" + props.id).value;
-    cartcntx.addItem({ ...props.item, quantity: quantity });
+    const enterdAmountNumber = +enteredAmount;
+
+    if (
+      enterdAmountNumber.toString().trim().length === 0 ||
+      enterdAmountNumber < 1 ||
+      enterdAmountNumber > 5
+    ) {
+      setAmountIsValid(false);
+      return;
+    }
+
+    props.onAddToCart(enterdAmountNumber);
   };
 
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={submmitHandler}>
       {/* {console.log(cartcntx.items)} */}
       <Input
+        ref={amountInputRef}
         label="Amount "
         input={{
           id: "amount_" + props.id,
@@ -26,7 +38,8 @@ const MealItemForm = (props) => {
           max: "5",
         }}
       />
-      <button onClick={addItemToCart}> + Add</button>
+      <button>+ Add</button>
+      {!ammountisValid && <p>Please enter a valid amount.</p>}
     </form>
   );
 };

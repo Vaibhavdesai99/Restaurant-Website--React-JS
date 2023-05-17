@@ -23,7 +23,7 @@ const Dummy_Meals = [
   },
   {
     id: "m4",
-    name: "Chicken Lolipop",
+    name: "Chicken Murg",
     description: "Restaurant special dish",
     price: 70.32,
   },

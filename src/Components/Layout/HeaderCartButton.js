@@ -7,11 +7,9 @@ const HeaderCartButton = (props) => {
 
   const cartCtx = useContext(CartContext);
 
-  let quantity = 0;
-  cartCtx.items.forEach((item) => {
-    // WE use Nmber caz it is in string so 1+2 => 12 but we want 3 so use Number.
-    quantity = quantity + Number(item.quantity);
-  });
+  const numberOfCartItems = cartCtx.items.reduce((currNumber, item) => {
+    return currNumber + item.amount;
+  }, 0);
 
   return (
     <div>
@@ -21,7 +19,7 @@ const HeaderCartButton = (props) => {
           <CartIcon />
         </span>
         <span>Your Order</span>
-        <span className={classes.amt}>{quantity}</span>
+        <span className={classes.amt}>{numberOfCartItems}</span>
       </button>
     </div>
   );
