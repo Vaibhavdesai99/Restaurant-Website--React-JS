@@ -19,6 +19,7 @@ const cartReducer = (state, action) => {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
+    // here we are storing reference to the existing item
     const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
 
